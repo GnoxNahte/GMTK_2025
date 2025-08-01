@@ -1,8 +1,7 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using VInspector;
 
 public class MapSection : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class MapSection : MonoBehaviour
 
     private MapSectionData _backupData; // In case want to revert
     
-    [ContextMenu("Save Data")]
+    [Button]
     public void SaveData() => SaveData(writeSectionData);
 
     private void BackupData()
@@ -52,9 +51,9 @@ public class MapSection : MonoBehaviour
         data.EnvironmentObjs = envObjs.Select(obj => new MapSectionData.EnvironmentObjData(obj.Type, obj.transform.position)).ToArray();
     }
 
-    [ContextMenu("Load Map Data")]
+    [Button]
     public void LoadData() => EditorLoadData(writeSectionData);
-    [ContextMenu("Load Backup Map Data")]
+    [Button]
     public void LoadBackupData() => EditorLoadData(_backupData);
 
     private void EditorLoadData(MapSectionData data)
@@ -84,7 +83,7 @@ public class MapSection : MonoBehaviour
             Instantiate(mapParams.PrefabsDict[obj.Type], obj.Position + offset, Quaternion.identity, tilemap.transform);
     }
 
-    [ContextMenu("Reset Tilemap")]
+    [Button]
     public void ResetTilemapEditor() => ResetTilemap(GetComponent<Tilemap>());
     public static void ResetTilemap(Tilemap tilemap)
     {
@@ -96,11 +95,7 @@ public class MapSection : MonoBehaviour
             if (Application.isPlaying)
                 Destroy(tilemap.transform.GetChild(0).gameObject);
             else
-            {
-                int index = i - 1;
-                print(index);
-                UnityEditor.EditorApplication.delayCall += ()=> DestroyImmediate(tilemap.transform.GetChild(index).gameObject);
-            }
+                DestroyImmediate(tilemap.transform.GetChild(0).gameObject);
         }
     }
 

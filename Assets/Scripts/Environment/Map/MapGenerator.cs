@@ -1,16 +1,15 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
-using Random = UnityEngine.Random;
+using VInspector;
 
 public class MapGenerator : MonoBehaviour
 {
     [SerializeField] private float minLength;
     [SerializeField] private MapGeneratorParams mapParams;
     [SerializeField] private int seed;
-    [SerializeField] private bool generateOnValidate;
     
-    [ContextMenu("Generate Map")]
+    [Button]
+    [OnValueChanged("seed", "minLength")]
     public void GenerateMap()
     {
         Random.InitState(seed);
@@ -29,11 +28,5 @@ public class MapGenerator : MonoBehaviour
             MapSection.LoadData(tilemap, section, mapParams, currLen);
             currLen += section.Width + mapParams.EndPadding; 
         }
-    }
-
-    private void OnValidate()
-    {
-        if (generateOnValidate)
-            GenerateMap();
     }
 }

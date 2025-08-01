@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Tilemaps;
 using VInspector;
 
@@ -21,9 +22,15 @@ public class MapGenerator : MonoBehaviour
         MapSectionData[] sections = Resources.LoadAll<MapSectionData>("MapData");
         
         int currLen = 0;
+        List<int> bag = new List<int>(sections.Length);
 
         while (currLen < minLength)
         {
+            // if (bag.Count == 0)
+            // {
+            //     bag.a
+            // }
+            
             MapSectionData section = sections[Random.Range(0, sections.Length)];
             MapSection.LoadData(tilemap, section, mapParams, currLen);
             currLen += section.Width + mapParams.EndPadding; 

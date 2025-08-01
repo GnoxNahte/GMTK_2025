@@ -78,9 +78,9 @@ public class MapSection : MonoBehaviour
 
     public static void LoadData(Tilemap tilemap, MapSectionData data, MapGeneratorParams mapParams, int xOffset = 0)
     {
-        if (!data)
+        if (!data || data.Tiles == null || data.Tiles.Length == 0)
         {
-            Debug.LogError("No Map Data load from");
+            Debug.LogError("No Map Data to load from");
             return;
         }
 

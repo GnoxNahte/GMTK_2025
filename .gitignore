@@ -76,3 +76,4 @@ crashlytics-build.properties
 /.idea
 /Assets/vHierarchy/*
 /Assets/vInspector/*
+!/Assets/vInspector/VInspectorAttributes.cs

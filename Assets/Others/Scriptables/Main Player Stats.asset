@@ -12,4 +12,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c45ec50c36da64fb88c84586680cfe, type: 3}
   m_Name: Main Player Stats
   m_EditorClassIdentifier: 
-  MaxSpeed: 0
+  MaxSpeed: 20
+  AirStrafeMaxSpeed: 17
+  MaxSpeedTime: 0.1
+  StopTime: 0.15
+  TurnTime: 0.05
+  InAirTurnTime: 0.15
+  MoveAcceleration: 200
+  StopAcceleration: -133.33333
+  TurnAcceleration: -800
+  InAirTurnAcceleration: -266.66666
+  DashCooldown: 0.5
+  DashTime: 0.2
+  DashCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 15
+      inSlope: -0.25556242
+      outSlope: -0.25556242
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.73829204
+    - serializedVersion: 3
+      time: 0.75
+      value: 7
+      inSlope: -21.310886
+      outSlope: -7.8676333
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.5371902
+    - serializedVersion: 3
+      time: 1
+      value: 5
+      inSlope: -14.367282
+      outSlope: -14.367282
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.31955886
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  MaxFallVelocity: -30
+  Gravity: -88.888885
+  FallingGravity: -128
+  WallSlideMaxSpeedTime: 0.5
+  WallSlideMaxSpeed: -5
+  WallSlideAcceleration: -10
+  MaxJumpHeight: 4
+  MinJumpHeight: 0.01
+  MinJumpTime: 0.00075
+  TimeToMaxHeight: 0.3
+  TimeToGround: 0.25
+  JumpVelocity: 26.666666
+  GravityMultiplierWhenRelease: 6
+  GravityMultiplierWhenReleaseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 8
+      inSlope: -1.330923
+      outSlope: -1.330923
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.70798904
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: -36.509068
+      outSlope: -36.509068
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.068870485
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  CoyoteTime: 0.175
+  JumpBuffer: 0.15
+  WallJumpHorizontalVelocity: 15
+  WallJumpHorizontalVelocityTowardsWall: 15
+  MinKnockbackVerticalSpeed: 12
+  InvincibilityDuration: 0.1

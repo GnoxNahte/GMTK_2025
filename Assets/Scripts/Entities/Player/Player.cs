@@ -9,6 +9,7 @@ public class Player : EntityBase
     public void Init(InputManager inputManager)
     {
         Movement.Init(inputManager, Stats);
+        Visuals.Init(Movement);
     }
 
     protected override void Awake()

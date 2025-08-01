@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
-        inputManager.Init(player.Movement);
         player.Init(inputManager);
     }
 }

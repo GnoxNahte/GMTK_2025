@@ -1,4 +1,5 @@
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using VInspector;
@@ -9,9 +10,17 @@ public class MapSection : MonoBehaviour
     [SerializeField] private MapSectionData writeSectionData;
 
     private MapSectionData _backupData; // In case want to revert
-    
+
+#if UNITY_EDITOR
     [Button]
-    public void SaveData() => SaveData(writeSectionData);
+    public void SaveData()
+    {
+        Undo.RecordObject(writeSectionData, "Saved Map Section");
+        SaveData(writeSectionData);
+        EditorUtility.SetDirty(writeSectionData);
+        AssetDatabase.SaveAssets();
+    }
+#endif
 
     private void BackupData()
     {

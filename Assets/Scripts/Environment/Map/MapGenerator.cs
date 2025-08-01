@@ -4,7 +4,7 @@ using VInspector;
 
 public class MapGenerator : MonoBehaviour
 {
-    [SerializeField] private float minLength;
+    [SerializeField] private int minLength;
     [SerializeField] private MapGeneratorParams mapParams;
     [SerializeField] private int seed;
     

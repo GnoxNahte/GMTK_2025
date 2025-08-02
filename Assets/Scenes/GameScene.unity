@@ -5053,6 +5053,7 @@ GameObject:
   - component: {fileID: 580837565}
   - component: {fileID: 580837567}
   - component: {fileID: 580837566}
+  - component: {fileID: 580837568}
   m_Layer: 5
   m_Name: Spirits
   m_TagString: Untagged
@@ -5119,6 +5120,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580837564}
   m_CullTransparentMesh: 1
+--- !u!114 &580837568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580837564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758b29f312ca48cba35278f2b5ff2982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 66331866}
+  icon: {fileID: 1866219470}
+  animationSpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxDistance: 100
+  maxTime: 2
 --- !u!1 &594318087
 GameObject:
   m_ObjectHideFlags: 0
@@ -11288,14 +11329,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9241133, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1110825670, guid: e812fd4d1c5a8f847bda1bcc92ea75e4, type: 3}
+  m_Sprite: {fileID: 1772975976557013343, guid: 2831717ca73f6bb4085ce0a7acb610b7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

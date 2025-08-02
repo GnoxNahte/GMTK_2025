@@ -70,7 +70,7 @@ public class MapGenerator : MonoBehaviour
 
     private void GenerateMap(Tilemap tilemap)
     {
-        MapSection.ResetTilemap(tilemap, _envPool);
+        MapSection.ResetTilemap(tilemap);
 
         int currLength = 0;
         while (currLength < minLength)

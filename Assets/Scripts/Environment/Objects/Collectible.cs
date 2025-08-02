@@ -1,10 +1,18 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Collectible : EnvironmentObjectBase
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    public override void Release()
     {
-        // throw new NotImplementedException();
+        StartCoroutine(AnimateToRelease());
+    }
+
+    public IEnumerator AnimateToRelease()
+    {
+        yield return CollectibleUI.Instance.AnimateToImage(this);
+        base.Release();
     }
 }

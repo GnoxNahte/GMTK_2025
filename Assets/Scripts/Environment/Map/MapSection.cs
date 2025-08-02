@@ -62,7 +62,7 @@ public class MapSection : MonoBehaviour
         Tilemap tilemap = GetComponent<Tilemap>();
         if (data != null)
         {
-            ResetTilemap(tilemap, null);
+            ResetTilemap(tilemap);
         }
 
         MapSectionData dataToLoad = data;
@@ -102,13 +102,14 @@ public class MapSection : MonoBehaviour
             }
 #endif
             GameObject go = envPool[obj.Type].Get(obj.Position + offset);
+            go.GetComponent<EnvironmentObjectBase>().SetPool(envPool[obj.Type]);
             go.transform.parent = tilemap.transform;
         }
     }
 
     [Button]
-    public void ResetTilemapEditor() => ResetTilemap(GetComponent<Tilemap>(), null);
-    public static void ResetTilemap(Tilemap tilemap, Dictionary<EnvironmentObjectBase.EnvType, ObjectPool> envPool)
+    public void ResetTilemapEditor() => ResetTilemap(GetComponent<Tilemap>());
+    public static void ResetTilemap(Tilemap tilemap)
     {
         tilemap.ClearAllTiles();
 
@@ -123,9 +124,7 @@ public class MapSection : MonoBehaviour
             }
 #endif
             GameObject go = tilemap.transform.GetChild(0).gameObject;
-            EnvironmentObjectBase envObj = go.GetComponent<EnvironmentObjectBase>();
-            go.transform.parent = envPool[envObj.Type].transform;
-            envPool[envObj.Type].Release(go);
+            go.GetComponent<EnvironmentObjectBase>().Release();
         }
     }
 

@@ -23,5 +23,17 @@ public abstract class EnvironmentObjectBase : MonoBehaviour
         Archer,
     }
 
+    private ObjectPool _pool;
     [field: SerializeField] public EnvType Type { get; private set; }
+
+    public void SetPool(ObjectPool pool)
+    {
+        _pool = pool;
+    }
+
+    public virtual void Release()
+    {
+        transform.parent = _pool.transform;
+        _pool.Release(gameObject);
+    }
 }

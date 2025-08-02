@@ -176,23 +176,29 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // private void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     Spike damageTrigger = other.gameObject.GetComponent<Spike>();
-    //     if (damageTrigger)
-    //     {
-    //         Vector2 dir = Vector2.one;
-    //         if (transform.position.x < other.transform.position.x)
-    //             dir.x *= -1f;
-    //         
-    //         ApplyKnockback(dir, damageTrigger.KnockbackStrength);
-    //         
-    //         // if (!_isInvincibleDamage)
-    //         //     OnHit?.Invoke(damageTrigger.Damage, transform.position);
-    //         
-    //         ActivateInvincibility();
-    //     }
-    // }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Collectible collectible = other.GetComponent<Collectible>();
+        if (collectible)
+        {
+            collectible.Release();
+        }
+        
+        // Spike damageTrigger = other.gameObject.GetComponent<Spike>();
+        // if (damageTrigger)
+        // {
+        //     Vector2 dir = Vector2.one;
+        //     if (transform.position.x < other.transform.position.x)
+        //         dir.x *= -1f;
+        //     
+        //     ApplyKnockback(dir, damageTrigger.KnockbackStrength);
+        //     
+        //     // if (!_isInvincibleDamage)
+        //     //     OnHit?.Invoke(damageTrigger.Damage, transform.position);
+        //     
+        //     ActivateInvincibility();
+        // }
+    }
 
     #endregion
     

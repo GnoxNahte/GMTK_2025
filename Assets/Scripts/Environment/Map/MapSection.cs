@@ -8,6 +8,10 @@ public class MapSection : MonoBehaviour
 {
     [SerializeField] private MapGeneratorParams mapParams;
     [SerializeField] private MapSectionData writeSectionData;
+    
+    // Quickly replacing all tiles with another tile when loading
+    [SerializeField] private TileBase replaceTileFrom;
+    [SerializeField] private TileBase replaceTileTo;
 
     private MapSectionData _backupData; // In case want to revert
 
@@ -73,7 +77,22 @@ public class MapSection : MonoBehaviour
             BackupData();
             ResetTilemap(tilemap);
         }
-        LoadData(tilemap, data, mapParams);
+
+        if (replaceTileFrom != null && replaceTileTo != null && replaceTileFrom != replaceTileTo)
+        {
+            MapSectionData tmpData = Instantiate(data);
+            for (int i = 0; i < tmpData.Tiles.Length; i++)
+            {
+                if (tmpData.Tiles[i] == replaceTileFrom)
+                    tmpData.Tiles[i] = replaceTileTo;
+            }
+            
+            LoadData(tilemap, tmpData, mapParams);
+        }
+        else
+        {
+            LoadData(tilemap, data, mapParams);
+        }
     }
 
     public static void LoadData(Tilemap tilemap, MapSectionData data, MapGeneratorParams mapParams, int xOffset = 0)

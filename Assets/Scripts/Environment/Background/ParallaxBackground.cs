@@ -4,12 +4,9 @@ using VInspector;
 
 public class ParallaxBackground : MonoBehaviour
 {
-    #region Serialized Variables
     [SerializeField] private float yParallaxScale = 1f;
     [SerializeField] private float xScrollSpeed = 0f;
-    #endregion
     
-    #region Private Variables
     private float _imageWidth;
     private float _parallaxAmt;
     private float _yStartHeight;
@@ -18,9 +15,6 @@ public class ParallaxBackground : MonoBehaviour
 
     private Camera _cam;
     private SpriteRenderer _sr;
-    #endregion
-
-    #region Public Methods
 
     [Button]
     public void ResetSpriteSize()
@@ -29,9 +23,12 @@ public class ParallaxBackground : MonoBehaviour
         _sr.size = _sr.sprite.bounds.size;
     }
 
-    #endregion
+    [Button]
+    public void SetStartHeight()
+    {
+        _yStartHeight = transform.position.y;
+    }
     
-    #region Unity Methods
     private void Awake()
     {
         _sr = GetComponent<SpriteRenderer>();
@@ -75,6 +72,4 @@ public class ParallaxBackground : MonoBehaviour
             camPos.y * _parallaxAmt * yParallaxScale + _yStartHeight
         );
     }
-
-    #endregion
 }

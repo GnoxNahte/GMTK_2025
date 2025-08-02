@@ -24,11 +24,11 @@ public class Importer: AssetPostprocessor {
         //textureImporter.textureCompression = TextureImporterCompression.CompressedHQ;
     
         //textureImporter.spritePixelsPerUnit = 16;
-        // textureImporter.spritePixelsPerUnit = 32;
-        textureImporter.spritePixelsPerUnit = 64;
+        textureImporter.spritePixelsPerUnit = 32;
+        // textureImporter.spritePixelsPerUnit = 64;
         // textureImporter.spritePixelsPerUnit = 100;
         
-        textureImporter.spriteImportMode = SpriteImportMode.Multiple;
-        // textureImporter.spriteImportMode = SpriteImportMode.Single;
+        // textureImporter.spriteImportMode = SpriteImportMode.Multiple;
+        textureImporter.spriteImportMode = SpriteImportMode.Single;
     }
 }

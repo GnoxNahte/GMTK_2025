@@ -71,6 +71,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
@@ -100,7 +109,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
@@ -108,6 +120,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -170,6 +186,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
@@ -183,6 +201,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -195,6 +214,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
@@ -212,6 +233,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -224,6 +246,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
@@ -241,6 +265,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -282,6 +309,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
@@ -299,6 +329,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -340,7 +373,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -398,7 +437,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -450,14 +495,14 @@ MonoBehaviour:
   - {fileID: 0}
   EnvironmentObjs:
   - Type: 0
-    Position: {x: 14, y: 12}
+    Position: {x: 17, y: 12}
   - Type: 0
-    Position: {x: 16, y: 12}
+    Position: {x: 19, y: 12}
   - Type: 0
-    Position: {x: 18, y: 12}
+    Position: {x: 21, y: 12}
   - Type: 0
-    Position: {x: 20, y: 12}
+    Position: {x: 23, y: 12}
   - Type: 0
-    Position: {x: 22, y: 12}
+    Position: {x: 25, y: 12}
   - Type: 1
-    Position: {x: 18, y: 7}
+    Position: {x: 21, y: 7}

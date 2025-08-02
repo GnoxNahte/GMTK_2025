@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -13,8 +14,6 @@ public class MapSection : MonoBehaviour
     [SerializeField] private TileBase replaceTileFrom;
     [SerializeField] private TileBase replaceTileTo;
 
-    private MapSectionData _backupData; // In case want to revert
-
 #if UNITY_EDITOR
     [Button]
     public void SaveData()
@@ -23,15 +22,6 @@ public class MapSection : MonoBehaviour
         SaveData(writeSectionData);
         EditorUtility.SetDirty(writeSectionData);
         AssetDatabase.SaveAssets();
-    }
-#endif
-
-    private void BackupData()
-    {
-        if (_backupData == null)
-            _backupData = ScriptableObject.CreateInstance<MapSectionData>();
-        
-        SaveData(_backupData);
     }
 
     private void SaveData(MapSectionData data)
@@ -66,36 +56,31 @@ public class MapSection : MonoBehaviour
 
     [Button]
     public void LoadData() => EditorLoadData(writeSectionData);
-    [Button]
-    public void LoadBackupData() => EditorLoadData(_backupData);
 
     private void EditorLoadData(MapSectionData data)
     {
         Tilemap tilemap = GetComponent<Tilemap>();
         if (data != null)
         {
-            BackupData();
-            ResetTilemap(tilemap);
+            ResetTilemap(tilemap, null);
         }
 
+        MapSectionData dataToLoad = data;
         if (replaceTileFrom != null && replaceTileTo != null && replaceTileFrom != replaceTileTo)
         {
-            MapSectionData tmpData = Instantiate(data);
-            for (int i = 0; i < tmpData.Tiles.Length; i++)
+            dataToLoad  = Instantiate(data);
+            for (int i = 0; i < dataToLoad.Tiles.Length; i++)
             {
-                if (tmpData.Tiles[i] == replaceTileFrom)
-                    tmpData.Tiles[i] = replaceTileTo;
+                if (dataToLoad.Tiles[i] == replaceTileFrom)
+                    dataToLoad.Tiles[i] = replaceTileTo;
             }
-            
-            LoadData(tilemap, tmpData, mapParams);
         }
-        else
-        {
-            LoadData(tilemap, data, mapParams);
-        }
+        
+        LoadData(tilemap, dataToLoad, mapParams, null);
     }
+#endif
 
-    public static void LoadData(Tilemap tilemap, MapSectionData data, MapGeneratorParams mapParams, int xOffset = 0)
+    public static void LoadData(Tilemap tilemap, MapSectionData data, MapGeneratorParams mapParams, Dictionary<EnvironmentObjectBase.EnvType, ObjectPool> envPool, int xOffset = 0)
     {
         if (!data || data.Tiles == null || data.Tiles.Length == 0)
         {
@@ -108,22 +93,39 @@ public class MapSection : MonoBehaviour
         
         Vector2 offset = Vector2.right * xOffset;
         foreach (var obj in data.EnvironmentObjs)
-            Instantiate(mapParams.PrefabsDict[obj.Type], obj.Position + offset, Quaternion.identity, tilemap.transform);
+        {
+#if UNITY_EDITOR
+            if (!Application.isPlaying)
+            {
+                Instantiate(mapParams.PrefabsDict[obj.Type], obj.Position + offset, Quaternion.identity, tilemap.transform);
+                continue;
+            }
+#endif
+            GameObject go = envPool[obj.Type].Get(obj.Position + offset);
+            go.transform.parent = tilemap.transform;
+        }
     }
 
     [Button]
-    public void ResetTilemapEditor() => ResetTilemap(GetComponent<Tilemap>());
-    public static void ResetTilemap(Tilemap tilemap)
+    public void ResetTilemapEditor() => ResetTilemap(GetComponent<Tilemap>(), null);
+    public static void ResetTilemap(Tilemap tilemap, Dictionary<EnvironmentObjectBase.EnvType, ObjectPool> envPool)
     {
         tilemap.ClearAllTiles();
 
         // Kill all children, Destroy last child first
         for (int i = tilemap.transform.childCount; i > 0; --i)
         {
-            if (Application.isPlaying)
-                Destroy(tilemap.transform.GetChild(0).gameObject);
-            else
+#if UNITY_EDITOR
+            if (!Application.isPlaying)
+            {
                 DestroyImmediate(tilemap.transform.GetChild(0).gameObject);
+                continue;
+            }
+#endif
+            GameObject go = tilemap.transform.GetChild(0).gameObject;
+            EnvironmentObjectBase envObj = go.GetComponent<EnvironmentObjectBase>();
+            go.transform.parent = envPool[envObj.Type].transform;
+            envPool[envObj.Type].Release(go);
         }
     }
 

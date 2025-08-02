@@ -18,7 +18,6 @@ public abstract class CollisionTracker<T> : MonoBehaviour
     #region Private Methods
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        print("HIT: " + collision.gameObject.name);
         // Ignore if it is a trigger
         if (collision.isTrigger)
             return;

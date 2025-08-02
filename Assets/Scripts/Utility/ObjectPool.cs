@@ -21,7 +21,7 @@ public class ObjectPool : MonoBehaviour
 
     public int ActiveCount => objs.Count - inactiveObjs.Count;
 
-    public bool initDone { get; private set; }
+    public bool InitDone { get; private set; } = false;
 
     private void Start()
     {
@@ -36,9 +36,14 @@ public class ObjectPool : MonoBehaviour
         activeObjsCount = totalObjsCount - inactiveObjsCount;
 #endif
     }
+    
+    public void SetPrefab(GameObject prefab) => this.prefab = prefab;
 
-    private void Init(int startCapacity = 100)
+    public void Init(int startCapacity = 100)
     {
+        if (InitDone)
+            return;
+        
         objs = new List<GameObject>(startCapacity);
         inactiveObjs = new List<GameObject>(startCapacity);
 
@@ -57,7 +62,7 @@ public class ObjectPool : MonoBehaviour
             inactiveObjs.Add(go);
         }
 
-        initDone = true;
+        InitDone = true;
     }
     
     public GameObject Get(Vector2 position)
@@ -132,6 +137,6 @@ public class ObjectPool : MonoBehaviour
         objs = null;
         inactiveObjs = null;
 
-        initDone = false;
+        InitDone = false;
     }
 }

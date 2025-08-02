@@ -5,8 +5,8 @@ public abstract class EnvironmentObjectBase : MonoBehaviour
     public enum EnvType
     {
         // Collectibles
-        SmallGem,
-        LargeGem,
+        SmallSpirit,
+        LargeSpirit,
         MovementRecover,
         
         // Helping Objects

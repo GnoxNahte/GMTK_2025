@@ -57,12 +57,12 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  MaxFallVelocity: -30
+  MaxFallVelocity: -40
   Gravity: -88.888885
   FallingGravity: -128
-  WallSlideMaxSpeedTime: 0.5
-  WallSlideMaxSpeed: -5
-  WallSlideAcceleration: -10
+  WallSlideMaxSpeedTime: 1
+  WallSlideMaxSpeed: -7.5
+  WallSlideAcceleration: -7.5
   MaxJumpHeight: 4
   MinJumpHeight: 0.01
   MinJumpTime: 0.00075
@@ -94,7 +94,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  CoyoteTime: 0.175
+  CoyoteTime: 0.18
   JumpBuffer: 0.15
   WallJumpHorizontalVelocity: 15
   WallJumpHorizontalVelocityTowardsWall: 15

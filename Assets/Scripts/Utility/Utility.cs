@@ -11,5 +11,15 @@ public static class Utility
     {
         return (value - from.x) / (from.y - from.x) * (to.y - to.x) + to.x;
     }
+
+    public static void Shuffle<T>(T[] arr)
+    {
+        // Shuffle
+        int count = arr.Length;
+        for (int i = 0; i < count - 1; ++i) {
+            int r = Random.Range(i, count);
+            (arr[i], arr[r]) = (arr[r], arr[i]);
+        }
+    }
 }
 

@@ -8,8 +8,9 @@ public class PlayerMovement : MonoBehaviour
     // Takes in damage and position
     public Action<int, Vector2> OnHit;
     public Vector2 FacingDirection => _facingDirection;
-    
-    #region Serialized Variables
+    public Vector2 Velocity => _velocity;
+    public bool IsInAir => _isInAir;
+    public bool IsDead => _isDead;
     
     [SerializeField] private int normalDamage;
     [SerializeField] private int dashDamage;
@@ -44,10 +45,6 @@ public class PlayerMovement : MonoBehaviour
     [ShowInInspector, ReadOnly] private bool _isDead;
     [ShowInInspector, ReadOnly] private bool _isInvincibleDamage;
     
-    #endregion
-    
-    #region Private Variables
-
     private PlayerStats _stats;
     private InputManager _input;
     private Rigidbody2D _rb;
@@ -59,8 +56,6 @@ public class PlayerMovement : MonoBehaviour
     
     private Coroutine _invincibilityCoroutine;
     private WaitForSeconds _invincibilityWait;
-    
-    #endregion
     
     #region Public Methods
     public void Init(InputManager input, PlayerStats stats)
@@ -159,27 +154,20 @@ public class PlayerMovement : MonoBehaviour
         // if (other.contacts.Length > 1)
         //     print("Contact point: " + other.contacts.Length + " | " + other.contacts[1].normal);
         
-        EntityBase entity = other.gameObject.GetComponent<EntityBase>();
-        if (entity != null)
-        {
-            ContactPoint2D contactPoint = other.contacts[0];
-
-            // entity.TakeDamage(damage, contactPoint.point);
-
-            ApplyKnockback(contactPoint.normal, entity.KnockbackSpeed);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
+        ContactPoint2D contactPoint = other.contacts[0];
+        
+        // EntityBase entity = other.gameObject.GetComponent<EntityBase>();
+        // if (entity != null)
+        // {
+        //     // entity.TakeDamage(damage, contactPoint.point);
+        //
+        //     ApplyKnockback(contactPoint.normal, entity.KnockbackSpeed);
+        // }
+        
         Spike damageTrigger = other.gameObject.GetComponent<Spike>();
         if (damageTrigger)
         {
-            Vector2 dir = Vector2.one;
-            if (transform.position.x < other.transform.position.x)
-                dir.x *= -1f;
-            
-            ApplyKnockback(dir, damageTrigger.KnockbackStrength);
+            ApplyKnockback(contactPoint.normal, damageTrigger.KnockbackStrength);
             
             // if (!_isInvincibleDamage)
             //     OnHit?.Invoke(damageTrigger.Damage, transform.position);
@@ -187,6 +175,24 @@ public class PlayerMovement : MonoBehaviour
             ActivateInvincibility();
         }
     }
+
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     Spike damageTrigger = other.gameObject.GetComponent<Spike>();
+    //     if (damageTrigger)
+    //     {
+    //         Vector2 dir = Vector2.one;
+    //         if (transform.position.x < other.transform.position.x)
+    //             dir.x *= -1f;
+    //         
+    //         ApplyKnockback(dir, damageTrigger.KnockbackStrength);
+    //         
+    //         // if (!_isInvincibleDamage)
+    //         //     OnHit?.Invoke(damageTrigger.Damage, transform.position);
+    //         
+    //         ActivateInvincibility();
+    //     }
+    // }
 
     #endregion
     
@@ -389,7 +395,9 @@ public class PlayerMovement : MonoBehaviour
     {
         _dashTimeLeft = -1f;
         
-        _velocity = speed * contactDirection.normalized;
+        _velocity = speed * Vector2.Reflect(_velocity.normalized, contactDirection.normalized); ;
+        // _velocity = speed * contactDirection.normalized;
+        Debug.DrawRay(transform.position, contactDirection, Color.blue, 1f);
         Debug.DrawRay(transform.position, _velocity, Color.red, 1f);
 
         if (Mathf.Abs(_velocity.y) < _stats.MinKnockbackVerticalSpeed)
@@ -403,9 +411,9 @@ public class PlayerMovement : MonoBehaviour
         // Debug.DrawRay(transform.position, velocity, Color.green, 1f);
         // print("Knockback final vel: " + velocity);
         
-        Vector2 totalMoveAmt = _velocity * Time.fixedDeltaTime;
-        
-        transform.position = (_rb.position + totalMoveAmt);
+        // Vector2 totalMoveAmt = _velocity * Time.fixedDeltaTime;
+        //
+        // _rb.MovePosition(_rb.position + totalMoveAmt);
     }
 
     private void ActivateInvincibility()

@@ -99,4 +99,4 @@ MonoBehaviour:
   WallJumpHorizontalVelocity: 15
   WallJumpHorizontalVelocityTowardsWall: 15
   MinKnockbackVerticalSpeed: 12
-  InvincibilityDuration: 2
+  InvincibilityDuration: 1.5

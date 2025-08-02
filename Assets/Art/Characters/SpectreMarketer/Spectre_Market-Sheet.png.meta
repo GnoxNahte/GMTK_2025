@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spectre_Market-Sheet_0: 7639353417685358903
+      Spectre_Market-Sheet_1: 3122835267148334027
+      Spectre_Market-Sheet_2: 4580137136965968405
+      Spectre_Market-Sheet_3: -5610452861279752692
+      Spectre_Market-Sheet_4: -8278900230222249593
+      Spectre_Market-Sheet_5: -7770018315632496013
+      Spectre_Market-Sheet_6: -3145359825530052809
+      Spectre_Market-Sheet_7: -1771923959350564692
+      Spectre_Market-Sheet_8: -4876223951552600529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

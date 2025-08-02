@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 Velocity => _velocity;
     public bool IsInAir => _isInAir;
     public bool IsDead => _isDead;
+    public bool IsInvincible => _isInvincibleDamage;
     
     [SerializeField] private int normalDamage;
     [SerializeField] private int dashDamage;
@@ -165,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
         // }
         
         Spike spike = other.gameObject.GetComponent<Spike>();
-        if (spike)
+        if (spike && !_isInvincibleDamage)
         {
             ApplyKnockback(contactPoint.normal, spike.KnockbackStrength);
             
@@ -436,6 +437,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // _rb.excludeLayers = invincibilityMask;
         _isInvincibleDamage = true;
+        print("Invincibility ON");
         _visuals.OnInvincibilityChange(true);
 
         yield return _invincibilityWait;
@@ -443,6 +445,7 @@ public class PlayerMovement : MonoBehaviour
         _visuals.OnInvincibilityChange(false);
         // _rb.excludeLayers = 0;
         _isInvincibleDamage = false;
+        print("Invincibility OFF");
         
         _invincibilityCoroutine = null;
     }

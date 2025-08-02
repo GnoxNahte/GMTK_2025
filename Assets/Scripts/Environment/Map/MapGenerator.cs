@@ -12,6 +12,7 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private GameObject tilemapPrefab;
     [SerializeField] private int tilemapCount;
     [SerializeField] private int seed;
+    [SerializeField] private int startOffset;
 
     private Dictionary<EnvironmentObjectBase.EnvType, ObjectPool> _envPool = null;
     private Player _player;
@@ -26,7 +27,8 @@ public class MapGenerator : MonoBehaviour
     public void Init(Player player)
     {
         _player = player;
-        
+
+        _currDist = startOffset;
         Random.InitState(seed);
         
         InitPool();

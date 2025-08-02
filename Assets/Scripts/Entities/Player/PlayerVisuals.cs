@@ -11,6 +11,7 @@ public class PlayerVisuals : MonoBehaviour
     
     private static readonly int AnimId_InAir = Animator.StringToHash("IsInAir");
     private static readonly int AnimId_IsDead = Animator.StringToHash("IsDead");
+    private static readonly int AnimId_IsInvincible = Animator.StringToHash("IsInvincible");
     private static readonly int AnimId_xSpeed = Animator.StringToHash("xSpeed");
     
     public void Init(PlayerMovement movement)
@@ -35,6 +36,7 @@ public class PlayerVisuals : MonoBehaviour
         
         _animator.SetBool(AnimId_InAir, _movement.IsInAir);
         _animator.SetBool(AnimId_IsDead, _movement.IsDead);
+        _animator.SetBool(AnimId_IsInvincible, _movement.IsInvincible);
         
         _animator.SetFloat(AnimId_xSpeed, Mathf.Abs(_movement.Velocity.x));
     }

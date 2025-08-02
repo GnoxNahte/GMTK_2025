@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Adult_Damage
+  m_Name: Adult_Damage_Idle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,15 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -4102043099912994981, guid: e0e2651caac8985449eaf09ffda585c4, type: 3}
-    - time: 0.041666668
       value: {fileID: -8190379492066930581, guid: e0e2651caac8985449eaf09ffda585c4, type: 3}
     attribute: m_Sprite
     path: Sprite
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 24
+  m_SampleRate: 12
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -46,7 +44,6 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -4102043099912994981, guid: e0e2651caac8985449eaf09ffda585c4, type: 3}
     - {fileID: -8190379492066930581, guid: e0e2651caac8985449eaf09ffda585c4, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2

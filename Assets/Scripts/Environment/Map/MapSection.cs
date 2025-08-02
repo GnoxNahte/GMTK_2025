@@ -51,7 +51,19 @@ public class MapSection : MonoBehaviour
         
         // Load environment objects
         var envObjs = GetComponentsInChildren<EnvironmentObjectBase>();
-        data.EnvironmentObjs = envObjs.Select(obj => new MapSectionData.EnvironmentObjData(obj.Type, obj.transform.position)).ToArray();
+        List<MapSectionData.EnvironmentObjData> envData = new List<MapSectionData.EnvironmentObjData>(envObjs.Length);
+        foreach (var obj in envObjs)
+        {
+            // Skip any object that is alr in the tilemap
+            if (obj.Type == EnvironmentObjectBase.EnvType.Spikes ||
+                obj.Type == EnvironmentObjectBase.EnvType.Spring ||
+                obj.Type == EnvironmentObjectBase.EnvType.Stomper)
+                continue;
+            
+            envData.Add(new MapSectionData.EnvironmentObjData(obj.Type, obj.transform.position));
+        }
+
+        data.EnvironmentObjs = envData.ToArray();
     }
 
     [Button]

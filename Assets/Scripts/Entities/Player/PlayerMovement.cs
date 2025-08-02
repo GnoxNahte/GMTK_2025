@@ -164,10 +164,10 @@ public class PlayerMovement : MonoBehaviour
         //     ApplyKnockback(contactPoint.normal, entity.KnockbackSpeed);
         // }
         
-        Spike damageTrigger = other.gameObject.GetComponent<Spike>();
-        if (damageTrigger)
+        Spike spike = other.gameObject.GetComponent<Spike>();
+        if (spike)
         {
-            ApplyKnockback(contactPoint.normal, damageTrigger.KnockbackStrength);
+            ApplyKnockback(contactPoint.normal, spike.KnockbackStrength);
             
             // if (!_isInvincibleDamage)
             //     OnHit?.Invoke(damageTrigger.Damage, transform.position);

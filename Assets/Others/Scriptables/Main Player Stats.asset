@@ -60,9 +60,9 @@ MonoBehaviour:
   MaxFallVelocity: -40
   Gravity: -88.888885
   FallingGravity: -128
-  WallSlideMaxSpeedTime: 1
-  WallSlideMaxSpeed: -7.5
-  WallSlideAcceleration: -7.5
+  WallSlideMaxSpeedTime: 0.75
+  WallSlideMaxSpeed: -8
+  WallSlideAcceleration: -10.666667
   MaxJumpHeight: 4
   MinJumpHeight: 0.01
   MinJumpTime: 0.00075
@@ -99,4 +99,4 @@ MonoBehaviour:
   WallJumpHorizontalVelocity: 15
   WallJumpHorizontalVelocityTowardsWall: 15
   MinKnockbackVerticalSpeed: 12
-  InvincibilityDuration: 0.1
+  InvincibilityDuration: 2

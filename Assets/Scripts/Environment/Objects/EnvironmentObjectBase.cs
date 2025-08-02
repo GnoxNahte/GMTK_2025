@@ -33,6 +33,13 @@ public abstract class EnvironmentObjectBase : MonoBehaviour
 
     public virtual void Release()
     {
+// #if UNITY_EDITOR
+        if (_pool == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+// #endif
         transform.parent = _pool.transform;
         _pool.Release(gameObject);
     }

@@ -34,8 +34,8 @@ public class MapGenerator : MonoBehaviour
         _sections = Resources.LoadAll<MapSectionData>("MapData");
         
         // Create tilemap bags, similar to tetris bag
-        _sectionBag = new int[tilemapCount];
-        for (int i = 0; i < tilemapCount; i++)
+        _sectionBag = new int[_sections.Length];
+        for (int i = 0; i < _sectionBag.Length; i++)
             _sectionBag[i] = i;
         GenerateBag();
         

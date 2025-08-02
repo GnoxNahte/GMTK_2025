@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64692dd59b62448c8fb35687847f98b6, type: 3}
-  m_Name: 1. Teach Jumping
+  m_Name: 5. Free spirits
   m_EditorClassIdentifier: 
   Tiles:
   - {fileID: 0}
@@ -30,125 +30,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 5b681c03b1af78b408f519039de56f95, type: 2}
-  - {fileID: 11400000, guid: 5b681c03b1af78b408f519039de56f95, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 5b681c03b1af78b408f519039de56f95, type: 2}
-  - {fileID: 11400000, guid: 5b681c03b1af78b408f519039de56f95, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 5b681c03b1af78b408f519039de56f95, type: 2}
-  - {fileID: 11400000, guid: 5b681c03b1af78b408f519039de56f95, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -179,37 +60,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -223,34 +73,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -264,33 +93,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
@@ -304,11 +111,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -320,11 +131,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -336,11 +151,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -352,11 +171,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -366,172 +190,48 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -615,26 +315,122 @@ MonoBehaviour:
   - {fileID: 0}
   EnvironmentObjs:
   - Type: 0
-    Position: {x: 15, y: 8.5}
+    Position: {x: 8, y: 1.75}
   - Type: 0
-    Position: {x: 18, y: 8.5}
+    Position: {x: 9, y: 1.75}
   - Type: 0
-    Position: {x: 22, y: 8.5}
+    Position: {x: 10, y: 1.75}
   - Type: 0
-    Position: {x: 26, y: 8.5}
+    Position: {x: 11, y: 1.75}
   - Type: 0
-    Position: {x: 30, y: 8.5}
+    Position: {x: 12, y: 1.75}
   - Type: 0
-    Position: {x: 34, y: 8.5}
+    Position: {x: 13, y: 1.75}
   - Type: 0
-    Position: {x: 38, y: 8.5}
+    Position: {x: 14, y: 1.75}
   - Type: 0
-    Position: {x: 22, y: 1.5}
+    Position: {x: 15, y: 1.75}
   - Type: 0
-    Position: {x: 30, y: 1.5}
+    Position: {x: 16, y: 1.75}
   - Type: 0
-    Position: {x: 7.5, y: 6.5}
+    Position: {x: 17, y: 1.75}
   - Type: 0
-    Position: {x: 38, y: 1.5}
+    Position: {x: 8, y: 3.25}
   - Type: 0
-    Position: {x: 14, y: 1.5}
+    Position: {x: 9, y: 3.25}
+  - Type: 0
+    Position: {x: 10, y: 3.25}
+  - Type: 0
+    Position: {x: 11, y: 3.25}
+  - Type: 0
+    Position: {x: 12, y: 3.25}
+  - Type: 0
+    Position: {x: 13, y: 3.25}
+  - Type: 0
+    Position: {x: 14, y: 3.25}
+  - Type: 0
+    Position: {x: 15, y: 3.25}
+  - Type: 0
+    Position: {x: 16, y: 3.25}
+  - Type: 0
+    Position: {x: 17, y: 3.25}
+  - Type: 0
+    Position: {x: 8, y: 4.75}
+  - Type: 0
+    Position: {x: 9, y: 4.75}
+  - Type: 0
+    Position: {x: 10, y: 4.75}
+  - Type: 0
+    Position: {x: 11, y: 4.75}
+  - Type: 0
+    Position: {x: 12, y: 4.75}
+  - Type: 0
+    Position: {x: 13, y: 4.75}
+  - Type: 0
+    Position: {x: 14, y: 4.75}
+  - Type: 0
+    Position: {x: 15, y: 4.75}
+  - Type: 0
+    Position: {x: 16, y: 4.75}
+  - Type: 0
+    Position: {x: 17, y: 4.75}
+  - Type: 0
+    Position: {x: 8, y: 6.25}
+  - Type: 0
+    Position: {x: 9, y: 6.25}
+  - Type: 0
+    Position: {x: 10, y: 6.25}
+  - Type: 0
+    Position: {x: 11, y: 6.25}
+  - Type: 0
+    Position: {x: 12, y: 6.25}
+  - Type: 0
+    Position: {x: 13, y: 6.25}
+  - Type: 0
+    Position: {x: 14, y: 6.25}
+  - Type: 0
+    Position: {x: 15, y: 6.25}
+  - Type: 0
+    Position: {x: 16, y: 6.25}
+  - Type: 0
+    Position: {x: 17, y: 6.25}
+  - Type: 0
+    Position: {x: 8, y: 7.75}
+  - Type: 0
+    Position: {x: 9, y: 7.75}
+  - Type: 0
+    Position: {x: 10, y: 7.75}
+  - Type: 0
+    Position: {x: 11, y: 7.75}
+  - Type: 0
+    Position: {x: 12, y: 7.75}
+  - Type: 0
+    Position: {x: 13, y: 7.75}
+  - Type: 0
+    Position: {x: 14, y: 7.75}
+  - Type: 0
+    Position: {x: 15, y: 7.75}
+  - Type: 0
+    Position: {x: 16, y: 7.75}
+  - Type: 0
+    Position: {x: 17, y: 7.75}
+  - Type: 0
+    Position: {x: 8, y: 12}
+  - Type: 0
+    Position: {x: 9, y: 12}
+  - Type: 0
+    Position: {x: 10, y: 12}
+  - Type: 0
+    Position: {x: 11, y: 12}
+  - Type: 0
+    Position: {x: 12, y: 12}
+  - Type: 0
+    Position: {x: 13, y: 12}
+  - Type: 0
+    Position: {x: 14, y: 12}
+  - Type: 0
+    Position: {x: 15, y: 12}
+  - Type: 0
+    Position: {x: 16, y: 12}
+  - Type: 0
+    Position: {x: 17, y: 12}

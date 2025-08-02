@@ -32,6 +32,9 @@ public class CollectibleUI : MonoBehaviour
         }
         
         _camera = Camera.main;
+
+        _collectedCount = 0;
+        text.text = _collectedCount.ToString();
     }  
   
     private void OnDestroy()  

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64692dd59b62448c8fb35687847f98b6, type: 3}
-  m_Name: 3. 3 Platforms and Crawlers
+  m_Name: 6. Pyramid
   m_EditorClassIdentifier: 
   Tiles:
   - {fileID: 0}
@@ -48,53 +48,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -118,6 +71,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -131,6 +86,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
@@ -166,6 +123,199 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
+  - {fileID: 11400000, guid: 4319b5192fbb05745b414088b7c14fcb, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -254,27 +404,17 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   EnvironmentObjs:
-  - Type: 7
-    Position: {x: 8, y: 8}
-  - Type: 7
-    Position: {x: 11, y: 4}
-  - Type: 7
-    Position: {x: 5, y: 4}
   - Type: 0
-    Position: {x: 6, y: 9}
+    Position: {x: 4.5, y: 5}
   - Type: 0
-    Position: {x: 7, y: 9}
+    Position: {x: 7.5, y: 8}
   - Type: 0
-    Position: {x: 8, y: 9}
+    Position: {x: 10.5, y: 11}
   - Type: 0
-    Position: {x: 9, y: 5}
+    Position: {x: 18.5, y: 11}
   - Type: 0
-    Position: {x: 10, y: 5}
+    Position: {x: 21.5, y: 8}
   - Type: 0
-    Position: {x: 11, y: 5}
-  - Type: 0
-    Position: {x: 5, y: 5}
-  - Type: 0
-    Position: {x: 4, y: 5}
-  - Type: 0
-    Position: {x: 3, y: 5}
+    Position: {x: 24.5, y: 5}
+  - Type: 1
+    Position: {x: 14, y: 13}

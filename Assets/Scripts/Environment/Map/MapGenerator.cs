@@ -13,6 +13,7 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private int tilemapCount;
     [SerializeField] private int seed;
     [SerializeField] private int startOffset;
+    [SerializeField] private MapSectionData editorTestSection = null;
 
     private Dictionary<EnvironmentObjectBase.EnvType, ObjectPool> _envPool = null;
     private Player _player;
@@ -93,17 +94,30 @@ public class MapGenerator : MonoBehaviour
     
     [Button]
     [OnValueChanged("seed", "minLength")]
+    [ContextMenu("Editor Generate Map")]
     public void EditorGenerateMap()
     {
-        return;
         Random.InitState(seed);
-        
+        Tilemap tilemap = GetComponentInChildren<Tilemap>();
         // Get all Sections
         _sections = Resources.LoadAll<MapSectionData>("MapData");
         
-        _currDist = 0;
-        Tilemap tilemap = GetComponentInChildren<Tilemap>();
-        GenerateMap(tilemap);
+        MapSection.ResetTilemap(tilemap);
+
+        int currLength = startOffset;
+        if (editorTestSection != null)
+        {
+            MapSection.LoadData(tilemap, editorTestSection, mapParams, _envPool, currLength);
+            currLength += editorTestSection.Width + mapParams.EndPadding;
+        }
+        
+        for (int i = 0; i < _sections.Length; i++)
+        {
+            MapSectionData section = _sections[i];
+            MapSection.LoadData(tilemap, section, mapParams, _envPool, currLength);
+            currLength += section.Width + mapParams.EndPadding; 
+        }
+        
     }
 
     private void GenerateBag()

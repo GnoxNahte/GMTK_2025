@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
         public GameObject BackgroundPrefab;
         public TileBase SourceOverrideTile;
         public TileBase OverrideTile;
+        public AudioClip BGM;
     }
 
     [ShowInInspector]
@@ -22,8 +23,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private LevelData[] levelData;
     [SerializeField] private Vector2 playerStartPos;
 
+    public static readonly int[] RequiredSpirit = new[] { 75, 150, 250, 600, 750, };
+
     // Returns the player and the level data
-    public (GameObject, LevelData) LoadLevel(MapGenerator mapGenerator)
+    public (GameObject, LevelData) LoadLevel()
     {
 #if UNITY_EDITOR
         if (forceLevel >= 0)
@@ -34,6 +37,11 @@ public class LevelManager : MonoBehaviour
         
         // Background
         Instantiate(data.BackgroundPrefab, Vector3.zero, Quaternion.identity);
+        
+        GameObject audioSourceGO = new GameObject("BGM", typeof(AudioSource));
+        audioSourceGO.GetComponent<AudioSource>().clip = data.BGM;
+        audioSourceGO.GetComponent<AudioSource>().volume = 0.113f;
+        audioSourceGO.GetComponent<AudioSource>().Play();
         
         return (player, data);
     }

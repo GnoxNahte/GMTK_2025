@@ -27,8 +27,8 @@ public class Cutscenes : MonoBehaviour
         if (LevelManager.SelectedLevel + 1 >= LevelManager.MaxLevel)
             return;
         
-        if (_index >= cutscenes.Length)
-            SceneManager.LoadScene("Game Scene 2");
+        if (_index >= cutscenes[LevelManager.SelectedLevel].Cutscenes.Length)
+            SceneManager.LoadScene("Upgrading");
         else
             cutscenes[LevelManager.SelectedLevel].Cutscenes[_index++].SetActive(true);
     }

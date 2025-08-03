@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
-        (GameObject playerObj, LevelManager.LevelData levelData) = levelManager.LoadLevel(mapGenerator);
+        (GameObject playerObj, LevelManager.LevelData levelData) = levelManager.LoadLevel();
         _player = playerObj.GetComponent<Player>();
         _player.Init(inputManager);
         cameraManager.Init(_player);

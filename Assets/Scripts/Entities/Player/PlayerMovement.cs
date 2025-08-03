@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private ObjectPool projectilePool;
     [SerializeField] private Transform shootOrigin;
     [SerializeField] private TriggerCollisionEvents attackHitBox;
-    [SerializeField] private CollisionTracker<EnemyBase> enemiesInRange;
     
     // Read only, for debugging
     [Header("Tracking Variables")]
@@ -85,9 +84,6 @@ public class PlayerMovement : MonoBehaviour
         
         _invincibilityWait = new WaitForSeconds(_stats.InvincibilityDuration);
         projectilePool.transform.parent = null;
-        
-        if (!isMelee)
-            enemiesInRange.gameObject.SetActive(true);
     }
 
     public bool IsGrounded() => !_isInAir;
@@ -112,18 +108,7 @@ public class PlayerMovement : MonoBehaviour
         {
             GameObject projectileGO = projectilePool.Get(shootOrigin.position);
             Projectile projectile = projectileGO.GetComponent<Projectile>();
-            float closestSqrDistance = float.MaxValue;
-            EnemyBase closestEnemy = null;
-            foreach (var enemy in enemiesInRange.CollidingObjs)
-            {
-                float dist = (shootOrigin.position - enemy.transform.position).sqrMagnitude;
-                if (dist < closestSqrDistance)
-                {
-                    closestSqrDistance = dist;
-                    closestEnemy = enemy;
-                }
-            }
-            projectile.Init(closestEnemy?.transform, projectilePool, _facingDirection); 
+            projectile.Init(projectilePool, _facingDirection); 
         }
         IsAttacking = true;
         _lastAttackTime = Time.time;
@@ -254,6 +239,20 @@ public class PlayerMovement : MonoBehaviour
         if (chaser && !_isInvincibleDamage)
         {
             ApplyKnockback(contactPoint.normal, new Vector2(40, 10));
+            
+            OnHit?.Invoke(10, transform.position);
+            
+            ActivateInvincibility();
+            return;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        Chaser chaser = other.gameObject.GetComponentInParent<Chaser>();
+        if (chaser && !_isInvincibleDamage && !IsDead)
+        {
+            ApplyKnockback(Vector2.right, new Vector2(40, 10));
             
             OnHit?.Invoke(20, transform.position);
             

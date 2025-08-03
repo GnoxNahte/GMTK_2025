@@ -33,8 +33,9 @@ public class MapGenerator : MonoBehaviour
         _sourceOverrideTile = sourceOverrideTile;
         _overrideTile = overrideTile;
 
+#if UNITY_EDITOR
         Random.InitState(seed);
-        
+#endif 
         InitPool();
         // Get all Sections
         _sections = Resources.LoadAll<MapSectionData>("MapData");

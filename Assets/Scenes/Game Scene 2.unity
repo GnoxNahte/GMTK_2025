@@ -222,7 +222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1536748572028122294, guid: 18b1f57b47b11c8459ba764e4d59421f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8452494741688906045, guid: 18b1f57b47b11c8459ba764e4d59421f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -262,7 +262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2448548229225143611, guid: 80bae503c37d4304abb71e0d4d2669b9, type: 3}
       propertyPath: forceLevel
-      value: 1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3568459868337932321, guid: 80bae503c37d4304abb71e0d4d2669b9, type: 3}
       propertyPath: m_Name

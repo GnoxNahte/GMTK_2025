@@ -93,6 +93,7 @@ Transform:
   - {fileID: 3675863095754415721}
   - {fileID: 5517212830653316720}
   - {fileID: 5533576300810668935}
+  - {fileID: 7775784363587567342}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7710164835103923024
@@ -160,6 +161,78 @@ MonoBehaviour:
   <MoveDir>k__BackingField: {x: 0, y: 0}
   <IsJumping>k__BackingField: 0
   <JumpPressedThisFrame>k__BackingField: 0
+--- !u!1 &4392963869860506510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7775784363587567342}
+  - component: {fileID: 3965135871985184669}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7775784363587567342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4392963869860506510}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5465173387395677373}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3965135871985184669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4392963869860506510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c1a604698204a159a85bdc4e5e52a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxData:
+    serializedKvps:
+    - Key: 0
+      Value:
+        Clip: {fileID: 8300000, guid: 0392bafd260dd3c4881095ff70c86cac, type: 3}
+        Volume: 0.7
+        StartCount: 20
+        PitchRange: {x: -0.57, y: 0.45}
+        Parent: {fileID: 0}
+      index: 0
+      isKeyRepeated: 0
+      isKeyNull: 0
+    - Key: 1
+      Value:
+        Clip: {fileID: 8300000, guid: d0ce32d401803fc478b7e09a73e33296, type: 3}
+        Volume: 0.682
+        StartCount: 10
+        PitchRange: {x: -0.57, y: 0.45}
+        Parent: {fileID: 0}
+      index: 1
+      isKeyRepeated: 0
+      isKeyNull: 0
+    dividerPos: 0.33
+  audioSources:
+    serializedKvps: []
+    dividerPos: 0.33
+  fadeDuration: 2
+  bgmVolume: 1
 --- !u!1 &6180314705339948309
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,12 +283,15 @@ MonoBehaviour:
     BackgroundPrefab: {fileID: 7928751987318894360, guid: 282b965c95e98cc4c9e85cc5e16825fd, type: 3}
     SourceOverrideTile: {fileID: 0}
     OverrideTile: {fileID: 0}
+    BGM: {fileID: 8300000, guid: ba3a4869ebe334745a41be017b5124cd, type: 3}
   - CharacterPrefab: {fileID: 1146669108121540867, guid: 84828e9db58df224790e6ccb4a2aa125, type: 3}
     BackgroundPrefab: {fileID: 7928751987318894360, guid: 6078c726e7d114b4a994aa2b5e79afe6, type: 3}
     SourceOverrideTile: {fileID: 0}
     OverrideTile: {fileID: 0}
+    BGM: {fileID: 8300000, guid: fc0b0ff278c1556428a238afa3eb3500, type: 3}
   - CharacterPrefab: {fileID: 7622732278396885606, guid: 6877fffe1539c124295034bd2080ed8a, type: 3}
     BackgroundPrefab: {fileID: 3670967838307583151, guid: d2a82fd8e0819094eaf76a04614550c3, type: 3}
     SourceOverrideTile: {fileID: 0}
     OverrideTile: {fileID: 0}
+    BGM: {fileID: 8300000, guid: f35e5f260ff6b314087e0dc91e2744de, type: 3}
   playerStartPos: {x: 5, y: 1.1}

@@ -12,6 +12,7 @@ public class Collectible : EnvironmentObjectBase
 
     public IEnumerator AnimateToRelease()
     {
+        AudioManager.PlaySFX(AudioManager.SFX.SpiritCollect);
         yield return CollectibleUI.Instance.AnimateToImage(this);
         base.Release();
     }

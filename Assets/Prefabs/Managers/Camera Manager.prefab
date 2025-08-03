@@ -103,6 +103,7 @@ MonoBehaviour:
   ifResize: 1
   yParallaxScale: 0
   xScrollSpeed: 0
+  resizeScale: 7
 --- !u!1 &1633382147455891082
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ee64e7840e50046abd44bba7138a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bg: {fileID: 1097247428724166649}
 --- !u!1 &1813344758883972771
 GameObject:
   m_ObjectHideFlags: 0

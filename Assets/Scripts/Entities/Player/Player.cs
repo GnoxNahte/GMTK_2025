@@ -38,7 +38,15 @@ public class Player : EntityBase
     private IEnumerator WaitDeath()
     {
         yield return new WaitForSeconds(5f);
-        LevelManager.SelectedLevel++;
-        SceneManager.LoadScene("Cutscenes");
+
+        if (CollectibleUI.CollectedCount >= LevelManager.RequiredSpirit[LevelManager.SelectedLevel])
+        {
+            LevelManager.SelectedLevel++;
+            SceneManager.LoadScene("Cutscenes");
+        }
+        else
+        {
+            SceneManager.LoadScene("Upgrading");
+        }
     }
 }

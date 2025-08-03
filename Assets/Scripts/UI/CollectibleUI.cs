@@ -12,7 +12,7 @@ public class CollectibleUI : MonoBehaviour
     [SerializeField] float maxDistance;
     [SerializeField] float maxTime;
 
-    private int _collectedCount;
+    public static int CollectedCount;
     
     private Camera _camera;
     private Canvas _canvas;
@@ -33,8 +33,7 @@ public class CollectibleUI : MonoBehaviour
         
         _camera = Camera.main;
 
-        _collectedCount = 0;
-        text.text = _collectedCount.ToString();
+        text.text = CollectedCount.ToString();
     }  
   
     private void OnDestroy()  
@@ -58,7 +57,7 @@ public class CollectibleUI : MonoBehaviour
         }
         
         // TODO Play collected sfx
-        _collectedCount++;
-        text.text = _collectedCount.ToString();
+        CollectedCount++;
+        text.text = CollectedCount.ToString();
     }
 }

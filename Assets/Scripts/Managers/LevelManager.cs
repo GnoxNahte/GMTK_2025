@@ -40,7 +40,7 @@ public class LevelManager : MonoBehaviour
         
         GameObject audioSourceGO = new GameObject("BGM", typeof(AudioSource));
         audioSourceGO.GetComponent<AudioSource>().clip = data.BGM;
-        audioSourceGO.GetComponent<AudioSource>().volume = 0.113f;
+        audioSourceGO.GetComponent<AudioSource>().volume = 0.2f;
         audioSourceGO.GetComponent<AudioSource>().Play();
         
         return (player, data);

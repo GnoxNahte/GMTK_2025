@@ -27,6 +27,12 @@ public class Player : EntityBase
     private void OnEnable() => Movement.OnHit += TakeDamage;
     private void OnDisable() => Movement.OnHit -= TakeDamage;
 
+    public override void TakeDamage(int damage, Vector2 position)
+    {
+        base.TakeDamage(damage, position);
+        AudioManager.PlaySFX(AudioManager.SFX.Hurt);
+    }
+
     protected override void OnDead()
     {
         base.OnDead();

@@ -1,5 +1,8 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : EntityBase
 {
@@ -23,4 +26,19 @@ public class Player : EntityBase
 
     private void OnEnable() => Movement.OnHit += TakeDamage;
     private void OnDisable() => Movement.OnHit -= TakeDamage;
+
+    protected override void OnDead()
+    {
+        base.OnDead();
+
+        Movement.OnDeath();
+        StartCoroutine(WaitDeath());
+    }
+
+    private IEnumerator WaitDeath()
+    {
+        yield return new WaitForSeconds(5f);
+        LevelManager.SelectedLevel++;
+        SceneManager.LoadScene("Cutscenes");
+    }
 }

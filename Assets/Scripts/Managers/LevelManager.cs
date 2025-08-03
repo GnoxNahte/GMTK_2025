@@ -15,6 +15,8 @@ public class LevelManager : MonoBehaviour
 
     [ShowInInspector]
     public static int SelectedLevel = 0;
+
+    [ShowInInspector] public static int MaxLevel = 3;
     [SerializeField] private int forceLevel = 0;
     
     [SerializeField] private LevelData[] levelData;

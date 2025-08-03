@@ -211,7 +211,7 @@ MonoBehaviour:
     SourceOverrideTile: {fileID: 0}
     OverrideTile: {fileID: 0}
   - CharacterPrefab: {fileID: 1146669108121540867, guid: 84828e9db58df224790e6ccb4a2aa125, type: 3}
-    BackgroundPrefab: {fileID: 3670967838307583151, guid: d2a82fd8e0819094eaf76a04614550c3, type: 3}
+    BackgroundPrefab: {fileID: 7928751987318894360, guid: 6078c726e7d114b4a994aa2b5e79afe6, type: 3}
     SourceOverrideTile: {fileID: 0}
     OverrideTile: {fileID: 0}
   - CharacterPrefab: {fileID: 7622732278396885606, guid: 6877fffe1539c124295034bd2080ed8a, type: 3}

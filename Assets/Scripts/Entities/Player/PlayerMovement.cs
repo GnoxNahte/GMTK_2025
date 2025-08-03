@@ -249,6 +249,17 @@ public class PlayerMovement : MonoBehaviour
             ActivateInvincibility();
             return;
         }
+        
+        Chaser chaser = other.gameObject.GetComponent<Chaser>();
+        if (chaser && !_isInvincibleDamage)
+        {
+            ApplyKnockback(contactPoint.normal, new Vector2(40, 10));
+            
+            OnHit?.Invoke(20, transform.position);
+            
+            ActivateInvincibility();
+            return;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -3,23 +3,14 @@ using UnityEngine;
 
 public class TriggerCollisionEvents : MonoBehaviour
 {
-    #region Public Variables
+    public Action<Collider2D> OnTriggerEnter;
+    public Action<Collider2D> OnTriggerExit;
 
-    public Action OnTriggerEnter;
-    public Action OnTriggerExit;
-    #endregion
-    
-    #region Unity Methods
+    private void OnTriggerEnter2D(Collider2D other) => OnTriggerEnter?.Invoke(other);
+    private void OnTriggerExit2D(Collider2D other) => OnTriggerExit?.Invoke(other);
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnEnable()
     {
-        OnTriggerEnter?.Invoke();
+        print("OnEnable");
     }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        OnTriggerExit?.Invoke();
-    }
-
-    #endregion
 }

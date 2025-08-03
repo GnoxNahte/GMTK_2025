@@ -28,7 +28,7 @@ public class Importer: AssetPostprocessor {
         // textureImporter.spritePixelsPerUnit = 64;
         // textureImporter.spritePixelsPerUnit = 100;
         
-        // textureImporter.spriteImportMode = SpriteImportMode.Multiple;
-        textureImporter.spriteImportMode = SpriteImportMode.Single;
+        textureImporter.spriteImportMode = SpriteImportMode.Multiple;
+        // textureImporter.spriteImportMode = SpriteImportMode.Single;
     }
 }

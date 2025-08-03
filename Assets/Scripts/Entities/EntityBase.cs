@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(Health))]
 public abstract class EntityBase : MonoBehaviour
 {
-    protected Health Health;
+    public Health Health { get; protected set; }
 
     [field: SerializeField] public Vector2 KnockbackSpeed { get; private set; }
 

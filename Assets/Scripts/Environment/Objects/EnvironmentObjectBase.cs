@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class EnvironmentObjectBase : MonoBehaviour
+public class EnvironmentObjectBase : MonoBehaviour
 {
     public enum EnvType
     {
@@ -18,7 +18,7 @@ public abstract class EnvironmentObjectBase : MonoBehaviour
         Stomper,
         
         // Enemies
-        Crawler,
+        Worm,
         Guard,
         Archer,
     }

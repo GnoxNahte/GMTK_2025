@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player : EntityBase
@@ -19,4 +20,7 @@ public class Player : EntityBase
         Movement = GetComponent<PlayerMovement>();
         Visuals = GetComponentInChildren<PlayerVisuals>();
     }
+
+    private void OnEnable() => Movement.OnHit += TakeDamage;
+    private void OnDisable() => Movement.OnHit -= TakeDamage;
 }

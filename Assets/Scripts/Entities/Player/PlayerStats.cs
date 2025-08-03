@@ -28,6 +28,10 @@ public class PlayerStats : ScriptableObject
     [ReadOnly] public float TurnAcceleration;
     [ReadOnly] public float InAirTurnAcceleration;
 
+    public float AttackCooldown;
+    public int AttackDamage;
+    public int AttackKnockback;
+    
     public float DashCooldown;
     public float DashTime;
     public AnimationCurve DashCurve;

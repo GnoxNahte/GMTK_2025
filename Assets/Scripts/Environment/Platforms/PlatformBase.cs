@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using VInspector;
 
@@ -16,11 +17,25 @@ public class PlatformBase : MonoBehaviour
         Death  = 1 << 3,
     }
 
+    [System.Serializable]
+    public class ModifierPair
+    {
+        public Type Type;
+        public PlatformModifierBase Modifier;
+    }
     public Type PlatformType => platformType;
 
     [SerializeField] protected Type platformType;
+    [SerializeField] protected ModifierPair[] modifierPairs;
     
-    [SerializeField] protected SerializedDictionary<Type, PlatformModifierBase> modifiers;
+    protected Dictionary<Type, PlatformModifierBase> modifiers;
+
+    private void Awake()
+    {
+        modifiers = new Dictionary<Type, PlatformModifierBase>(modifierPairs.Length);
+        foreach (var pair in modifierPairs)
+            modifiers.Add(pair.Type, pair.Modifier);
+    }
 
     public bool HasPlatformTypeFlag(Type type)
     {

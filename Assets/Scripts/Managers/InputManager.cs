@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
     [field: SerializeField, ReadOnly] public Vector2 MoveDir { get; private set; }
     [field: SerializeField, ReadOnly] public bool IsJumping { get; private set; }
     [field: SerializeField, ReadOnly] public bool JumpPressedThisFrame { get; private set; }
-    
+
     private PlayerControls _playerControls;
     
     private InputAction _move;
@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour
     private InputAction _pause;
     private InputAction _continue;
     
+    public event Action OnAttackPressed;
     public event Action OnDashPressed;
     public event Action OnContinuePressed;
     
@@ -64,6 +65,8 @@ public class InputManager : MonoBehaviour
         // === Abilities ===
         if (_dash.IsPressed())
             OnDashPressed?.Invoke();
+        if (_attack.IsPressed())
+            OnAttackPressed?.Invoke();
         
         // Others
         if (_continue.WasPressedThisFrame())

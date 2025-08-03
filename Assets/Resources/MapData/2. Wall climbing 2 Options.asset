@@ -506,3 +506,7 @@ MonoBehaviour:
     Position: {x: 26.5, y: 13}
   - Type: 1
     Position: {x: 22, y: 8}
+  - Type: 7
+    Position: {x: 17.5, y: 12}
+  - Type: 7
+    Position: {x: 29, y: 12}

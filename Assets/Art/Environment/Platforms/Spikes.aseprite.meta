@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638897658613530898
+  platformSettingsDirtyTick: 638898170703748235
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -167,10 +167,12 @@ ScriptedImporter:
     vertices: []
     spritePhysicsOutline:
     - outline:
-      - {x: 9, y: -12}
-      - {x: -9, y: -12}
-      - {x: -13, y: -16}
-      - {x: 12, y: -16}
+      - {x: 16, y: -12}
+      - {x: 12, y: -8}
+      - {x: -11, y: -8}
+      - {x: -16, y: -11}
+      - {x: -16, y: -16}
+      - {x: 16, y: -16}
     indices: 
     edges: []
     tessellationDetail: 0
@@ -193,10 +195,12 @@ ScriptedImporter:
     vertices: []
     spritePhysicsOutline:
     - outline:
-      - {x: 16, y: 12}
-      - {x: 13, y: 9}
-      - {x: 13, y: -7}
-      - {x: 16, y: -12}
+      - {x: 16, y: 16}
+      - {x: 11, y: 16}
+      - {x: 8, y: 12}
+      - {x: 9, y: -12}
+      - {x: 12, y: -16}
+      - {x: 16, y: -16}
     indices: 
     edges: []
     tessellationDetail: 0
@@ -219,8 +223,9 @@ ScriptedImporter:
     vertices: []
     spritePhysicsOutline:
     - outline:
-      - {x: -8, y: -12}
-      - {x: -14, y: -16}
+      - {x: -9, y: -6}
+      - {x: -16, y: -11}
+      - {x: -16, y: -16}
       - {x: -2, y: -16}
     indices: 
     edges: []
@@ -245,8 +250,9 @@ ScriptedImporter:
     spritePhysicsOutline:
     - outline:
       - {x: 16, y: -2}
-      - {x: 10, y: -9}
-      - {x: 16, y: -15}
+      - {x: 5, y: -10}
+      - {x: 11, y: -16}
+      - {x: 16, y: -16}
     indices: 
     edges: []
     tessellationDetail: 0

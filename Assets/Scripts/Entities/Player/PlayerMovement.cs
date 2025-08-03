@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using VInspector;
 
@@ -25,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private ObjectPool shockwavePool;
     
+    [SerializeField] private TriggerCollisionEvents attackHitBox;
+    
     // Read only, for debugging
     [Header("Tracking Variables")]
 
@@ -41,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
     [ShowInInspector, ReadOnly] private float _dashTimeLeft;
     [ShowInInspector, ReadOnly] private float _lastDashTime;
+    
+    [ShowInInspector, ReadOnly] private float _lastAttackTime;
 
     // Stops movement if using ability
     [ShowInInspector, ReadOnly] private bool _isDead;
@@ -49,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerStats _stats;
     private InputManager _input;
     private Rigidbody2D _rb;
+    private Collider2D _collider;
     private PlayerVisuals _visuals;
     
     // Only change when there's input
@@ -57,6 +63,9 @@ public class PlayerMovement : MonoBehaviour
     
     private Coroutine _invincibilityCoroutine;
     private WaitForSeconds _invincibilityWait;
+    
+    // Other variables, all public to save time
+    public bool IsAttacking;
     
     #region Public Methods
     public void Init(InputManager input, PlayerStats stats)
@@ -83,6 +92,31 @@ public class PlayerMovement : MonoBehaviour
         _lastDashTime = Time.time;
         _dashTimeLeft = _stats.DashTime;
     }
+
+    public void Attack()
+    {
+        if (Time.time - _lastAttackTime < _stats.AttackCooldown)
+            return;
+        
+        attackHitBox.gameObject.SetActive(true);
+        IsAttacking = true;
+        _lastAttackTime = Time.time;
+    }
+
+    public void OnAttackDone()
+    {
+        attackHitBox.gameObject.SetActive(false);
+        IsAttacking = false;
+    }
+
+    public void OnAttackHit(Collider2D other)
+    {
+        EnemyBase enemy = other.GetComponent<EnemyBase>();
+        if (enemy)
+        {
+            enemy.TakeDamage(_stats.AttackDamage, enemy.transform.position);
+        }
+    }
     
     public void OnDeath()
     {
@@ -95,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _collider = GetComponent<Collider2D>();
         _visuals = GetComponent<PlayerVisuals>();
 
         shockwavePool.transform.parent = null;
@@ -103,13 +138,23 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         if (_input)
+        {
             _input.OnDashPressed += Dash;
+            _input.OnAttackPressed += Attack;
+        }
+
+        attackHitBox.OnTriggerEnter += OnAttackHit;
     }
 
     private void OnDisable()
     {
         if (_input)
+        {
             _input.OnDashPressed -= Dash;
+            _input.OnAttackPressed -= Attack;
+        }
+        
+        attackHitBox.OnTriggerEnter -= OnAttackHit;
     }
 
     private void Update()
@@ -157,23 +202,26 @@ public class PlayerMovement : MonoBehaviour
         
         ContactPoint2D contactPoint = other.contacts[0];
         
-        // EntityBase entity = other.gameObject.GetComponent<EntityBase>();
-        // if (entity != null)
-        // {
-        //     // entity.TakeDamage(damage, contactPoint.point);
-        //
-        //     ApplyKnockback(contactPoint.normal, entity.KnockbackSpeed);
-        // }
+        EnemyBase entity = other.gameObject.GetComponent<EnemyBase>();
+        if (entity && !_isInvincibleDamage)
+        {
+            OnHit?.Invoke(entity.Damage, transform.position);
+        
+            ApplyKnockback(contactPoint.normal, entity.KnockbackSpeed);
+            
+            ActivateInvincibility();
+            return;
+        }
         
         Spike spike = other.gameObject.GetComponent<Spike>();
         if (spike && !_isInvincibleDamage)
         {
             ApplyKnockback(contactPoint.normal, spike.KnockbackStrength);
             
-            // if (!_isInvincibleDamage)
-            //     OnHit?.Invoke(damageTrigger.Damage, transform.position);
+            OnHit?.Invoke(spike.Damage, transform.position);
             
             ActivateInvincibility();
+            return;
         }
     }
 
@@ -288,9 +336,6 @@ public class PlayerMovement : MonoBehaviour
             PlatformBase platform = groundChecker.GetCollidingPlatformWithType(PlatformBase.Type.OneWay);
             if (!platform) 
                 return;
-            
-            OneWayPlatformModifier oneWayModifier = platform.GetPlatformModifier(PlatformBase.Type.OneWay) as OneWayPlatformModifier;
-            oneWayModifier?.SetFlipped(true);
         }
         // Land on ground
         else
@@ -415,8 +460,8 @@ public class PlayerMovement : MonoBehaviour
         if (_velocity.y < 0f)
             _velocity.y *= 0.5f; // Down knockback is too strong, partly because of increased gravity when going down
         
-        // Debug.DrawRay(transform.position, velocity, Color.green, 1f);
-        // print("Knockback final vel: " + velocity);
+        Debug.DrawRay(transform.position, _velocity, Color.green, 1f);
+        print("Knockback final vel: " + _velocity);
         
         // Vector2 totalMoveAmt = _velocity * Time.fixedDeltaTime;
         //
@@ -437,7 +482,6 @@ public class PlayerMovement : MonoBehaviour
     {
         // _rb.excludeLayers = invincibilityMask;
         _isInvincibleDamage = true;
-        print("Invincibility ON");
         _visuals.OnInvincibilityChange(true);
 
         yield return _invincibilityWait;
@@ -445,8 +489,16 @@ public class PlayerMovement : MonoBehaviour
         _visuals.OnInvincibilityChange(false);
         // _rb.excludeLayers = 0;
         _isInvincibleDamage = false;
-        print("Invincibility OFF");
         
+        List<Collider2D> colliders = new List<Collider2D>();
+        Physics2D.OverlapCollider(groundChecker.Collider, colliders);
+        if (colliders.Count > 0)
+        {
+            // Re-trigger any OnCollisionEnter
+            _collider.enabled = false;
+            _collider.enabled = true;
+        }
+
         _invincibilityCoroutine = null;
     }
 

@@ -26,7 +26,11 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private ObjectPool shockwavePool;
     
+    [SerializeField] private bool isMelee;
+    [SerializeField] private ObjectPool projectilePool;
+    [SerializeField] private Transform shootOrigin;
     [SerializeField] private TriggerCollisionEvents attackHitBox;
+    [SerializeField] private CollisionTracker<EnemyBase> enemiesInRange;
     
     // Read only, for debugging
     [Header("Tracking Variables")]
@@ -80,6 +84,10 @@ public class PlayerMovement : MonoBehaviour
         OnEnable();
         
         _invincibilityWait = new WaitForSeconds(_stats.InvincibilityDuration);
+        projectilePool.transform.parent = null;
+        
+        if (!isMelee)
+            enemiesInRange.gameObject.SetActive(true);
     }
 
     public bool IsGrounded() => !_isInAir;
@@ -98,7 +106,25 @@ public class PlayerMovement : MonoBehaviour
         if (Time.time - _lastAttackTime < _stats.AttackCooldown)
             return;
         
-        attackHitBox.gameObject.SetActive(true);
+        if (isMelee)
+            attackHitBox.gameObject.SetActive(true);
+        else
+        {
+            GameObject projectileGO = projectilePool.Get(shootOrigin.position);
+            Projectile projectile = projectileGO.GetComponent<Projectile>();
+            float closestSqrDistance = float.MaxValue;
+            EnemyBase closestEnemy = null;
+            foreach (var enemy in enemiesInRange.CollidingObjs)
+            {
+                float dist = (shootOrigin.position - enemy.transform.position).sqrMagnitude;
+                if (dist < closestSqrDistance)
+                {
+                    closestSqrDistance = dist;
+                    closestEnemy = enemy;
+                }
+            }
+            projectile.Init(closestEnemy?.transform, projectilePool, _facingDirection); 
+        }
         IsAttacking = true;
         _lastAttackTime = Time.time;
     }

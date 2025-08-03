@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f89bbc076a400aa9314204175bdd09, type: 3}
   m_Name: _MapParams
   m_EditorClassIdentifier: 
-  EndPadding: 2
+  EndPadding: 0
   prefabs:
   - Type: 0
     Prefab: {fileID: 6258816264924637185, guid: 4ff3327ce729517428b4b85f0441fac2, type: 3}

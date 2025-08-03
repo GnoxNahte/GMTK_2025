@@ -12,24 +12,27 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private GameObject tilemapPrefab;
     [SerializeField] private int tilemapCount;
     [SerializeField] private int seed;
-    [SerializeField] private int startOffset;
     [SerializeField] private MapSectionData editorTestSection = null;
+    [SerializeField] private MapSectionData startSection = null;
 
     private Dictionary<EnvironmentObjectBase.EnvType, ObjectPool> _envPool = null;
     private Player _player;
     private Tilemap[] _tilemaps;
     private MapSectionData[] _sections = null;
+    
+    private TileBase _sourceOverrideTile, _overrideTile;
 
     private int _currTilemap = 0;
     private int _currDist = 0;
     private int _currBagIndex = 0;
     private int[] _sectionBag = null; // Similar to tetris bag
 
-    public void Init(Player player)
+    public void Init(Player player, TileBase sourceOverrideTile, TileBase overrideTile)
     {
         _player = player;
+        _sourceOverrideTile = sourceOverrideTile;
+        _overrideTile = overrideTile;
 
-        _currDist = startOffset;
         Random.InitState(seed);
         
         InitPool();
@@ -46,6 +49,9 @@ public class MapGenerator : MonoBehaviour
         _tilemaps = new Tilemap[tilemapCount];
         for (int i = 0; i < tilemapCount; i++)
             _tilemaps[i] = Instantiate(tilemapPrefab, transform).GetComponent<Tilemap>();
+        
+        MapSection.LoadData(_tilemaps[0], startSection, mapParams, _envPool, _sourceOverrideTile, _overrideTile, 0);
+        _currDist += startSection.Width;
     }
 
     private void InitPool()
@@ -74,7 +80,7 @@ public class MapGenerator : MonoBehaviour
     private void GenerateMap(Tilemap tilemap)
     {
         MapSection.ResetTilemap(tilemap);
-
+        
         int currLength = 0;
         while (currLength < minLength)
         {
@@ -85,7 +91,7 @@ public class MapGenerator : MonoBehaviour
                 GenerateBag();
             }
             MapSectionData section = _sections[sectionIndex];
-            MapSection.LoadData(tilemap, section, mapParams, _envPool, _currDist + currLength);
+            MapSection.LoadData(tilemap, section, mapParams, _envPool, _sourceOverrideTile, _overrideTile, _currDist + currLength);
             currLength += section.Width + mapParams.EndPadding; 
         }
 
@@ -104,17 +110,17 @@ public class MapGenerator : MonoBehaviour
         
         MapSection.ResetTilemap(tilemap);
 
-        int currLength = startOffset;
+        int currLength = 0;
         if (editorTestSection != null)
         {
-            MapSection.LoadData(tilemap, editorTestSection, mapParams, _envPool, currLength);
+            MapSection.LoadData(tilemap, editorTestSection, mapParams, _envPool, _sourceOverrideTile, _overrideTile, currLength);
             currLength += editorTestSection.Width + mapParams.EndPadding;
         }
         
         for (int i = 0; i < _sections.Length; i++)
         {
             MapSectionData section = _sections[i];
-            MapSection.LoadData(tilemap, section, mapParams, _envPool, currLength);
+            MapSection.LoadData(tilemap, section, mapParams, _envPool, _sourceOverrideTile, _overrideTile, currLength);
             currLength += section.Width + mapParams.EndPadding; 
         }
         

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6436617996703232923}
   - component: {fileID: 3460389290470721705}
   - component: {fileID: 6003084953483417586}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Small Spirit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2872686464912179684}
   - component: {fileID: 5238869571649688870}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

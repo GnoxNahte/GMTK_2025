@@ -4,8 +4,10 @@ using VInspector;
 
 public class ParallaxBackground : MonoBehaviour
 {
+    [SerializeField] private bool ifResize = true;
     [SerializeField] private float yParallaxScale = 1f;
     [SerializeField] private float xScrollSpeed = 0f;
+    [SerializeField] private float resizeScale = 7;
     
     private float _imageWidth;
     private float _parallaxAmt;
@@ -53,7 +55,8 @@ public class ParallaxBackground : MonoBehaviour
         // TODO: Calculate width using camera orthographic size 
         // Consider the distance between the background and far clip plane
         // Make sure it's an odd number to make sure a full image is in the middle.
-        _sr.size = new Vector2(_imageWidth * 7, _sr.size.y);
+        if (ifResize)
+            _sr.size = new Vector2(_imageWidth * resizeScale, _sr.size.y);
 
         // Uses far clip plane here but might just use a serialized variable next time if need to extend the far clip plane in the future.
         _parallaxAmt = Mathf.Clamp01(transform.position.z / (_cam.farClipPlane + _cam.transform.position.z));

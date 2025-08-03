@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -92,7 +93,7 @@ public class MapSection : MonoBehaviour
     }
 #endif
 
-    public static void LoadData(Tilemap tilemap, MapSectionData data, MapGeneratorParams mapParams, Dictionary<EnvironmentObjectBase.EnvType, ObjectPool> envPool, int xOffset = 0)
+    public static void LoadData(Tilemap tilemap, MapSectionData data, MapGeneratorParams mapParams, Dictionary<EnvironmentObjectBase.EnvType, ObjectPool> envPool, TileBase sourceTile = null, TileBase overrideTile = null, int xOffset = 0)
     {
         if (!data || data.Tiles == null || data.Tiles.Length == 0)
         {
@@ -100,9 +101,26 @@ public class MapSection : MonoBehaviour
             return;
         }
 
+        // Set tiles
         BoundsInt bounds = new BoundsInt(xOffset, 0, 0, data.Width, MapSectionData.Height, 1);
-        tilemap.SetTilesBlock(bounds, data.Tiles);
         
+        TileBase[] tiles = data.Tiles;
+        // // Array.Copy(data.Tiles, tiles, data.Tiles.Length);
+        // if (sourceTile && overrideTile && sourceTile != overrideTile)
+        // {
+        //     for (int i = 0; i < tiles.Length; i++)
+        //     {
+        //         if (tiles[i] == sourceTile)
+        //             tiles[i] = overrideTile;
+        //     }
+        // }
+        // // else
+        // // {
+        // //     tiles = data.Tiles;
+        // // }
+        tilemap.SetTilesBlock(bounds, tiles);
+        
+        // Set Environment objects
         Vector2 offset = Vector2.right * xOffset;
         foreach (var obj in data.EnvironmentObjs)
         {

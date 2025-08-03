@@ -21,6 +21,6 @@ public class MapSectionData : ScriptableObject
     public TileBase[] Tiles;
     public EnvironmentObjData[] EnvironmentObjs;
     
-    public const int Height = 15;
+    public const int Height = 17;
     public int Width => Tiles.Length / Height;
 }

@@ -23,7 +23,7 @@ MonoBehaviour:
   TurnAcceleration: -800
   InAirTurnAcceleration: -266.66666
   AttackCooldown: 0.2
-  AttackDamage: 10
+  AttackDamage: 15
   AttackKnockback: 15
   DashCooldown: 0.5
   DashTime: 0.2
